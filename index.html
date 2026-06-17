@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BanG Dream! 40角色性格匹配测试</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="stage-lights" aria-hidden="true"></div>
+  <div class="note-field" aria-hidden="true">
+    <span>♪</span><span>✦</span><span>♬</span><span>★</span><span>♪</span><span>✧</span>
+  </div>
+
+  <main class="app-shell">
+    <section id="startScreen" class="screen start-screen active">
+      <div class="brand-row">
+        <span class="live-badge">Girls Band Personality Live</span>
+        <span class="beat-dot"></span>
+        <span>40 Characters / 30 Questions</span>
+      </div>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="kicker">Unofficial fan-made test</p>
+          <h1>BanG Dream!<br>40角色性格匹配测试</h1>
+          <p class="intro">从排练、舞台、队友关系和压力反应里，匹配最接近你的 Bandori 角色气质。</p>
+          <button id="startBtn" class="primary-btn">
+            <span>开始演出</span>
+            <span class="btn-spark">▶</span>
+          </button>
+        </div>
+        <div class="live-card" aria-label="测试角色与乐队素材预览">
+          <div class="card-top">
+            <span>Now Matching</span>
+            <span>EXPERT</span>
+          </div>
+          <div id="heroCharacters" class="character-orbit"></div>
+          <div id="heroBands" class="band-strip" aria-label="乐队图标预览"></div>
+          <div class="rhythm-lanes">
+            <i></i><i></i><i></i><i></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="quizScreen" class="screen quiz-screen">
+      <header class="quiz-header">
+        <div>
+          <p class="kicker">Question <span id="questionNumber">01</span> / 30</p>
+          <h2 id="questionText"></h2>
+        </div>
+        <div class="combo-panel">
+          <span id="comboCount">0</span>
+          <small>COMBO</small>
+        </div>
+      </header>
+      <div class="progress-wrap" aria-label="答题进度">
+        <div id="progressBar" class="progress-bar"></div>
+      </div>
+      <div id="options" class="options"></div>
+      <div class="quiz-actions">
+        <button id="prevBtn" class="ghost-btn">上一题</button>
+        <button id="nextBtn" class="primary-btn" disabled>下一题</button>
+      </div>
+    </section>
+
+    <section id="resultScreen" class="screen result-screen">
+      <div class="result-spotlight">
+        <p class="kicker">Encore Result</p>
+        <h2>你的最高匹配是</h2>
+        <div id="resultCard" class="result-card"></div>
+      </div>
+      <div class="score-board">
+        <h3>40角色匹配排行榜</h3>
+        <div id="ranking"></div>
+      </div>
+      <div class="result-actions">
+        <button id="restartBtn" class="primary-btn">再测一次</button>
+      </div>
+    </section>
+
+    <footer class="page-footer">
+      <span>资料与素材引用自公开 BanG Dream! 游戏资源索引；本页面为非官方粉丝向性格测试。</span>
+    </footer>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
