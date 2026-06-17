@@ -271,7 +271,6 @@ const optionsWrap = document.getElementById("options");
 const resultCard = document.getElementById("resultCard");
 const ranking = document.getElementById("ranking");
 const heroCharacters = document.getElementById("heroCharacters");
-const heroBands = document.getElementById("heroBands");
 
 function q(text, options) {
   return { text, options: options.map(([label, vector]) => ({ label, vector })) };
@@ -293,9 +292,6 @@ function renderHeroAssets() {
     `;
   }).join("");
 
-  heroBands.innerHTML = Object.values(bandInfo).map(band => `
-    <img src="${band.logo}" alt="${band.name} logo">
-  `).join("");
 }
 
 function renderQuestion() {
