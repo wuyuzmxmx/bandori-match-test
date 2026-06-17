@@ -652,33 +652,57 @@ h1 {
   }
 
   .live-card {
-    min-height: 470px;
+    min-height: 0;
+    padding: 18px;
     border-radius: 22px;
+    overflow: visible;
   }
 
   .character-orbit {
-    height: 210px;
+    height: auto;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 8px;
     margin-top: 20px;
+    padding: 4px 0;
   }
 
   .avatar {
-    width: 66px;
-    height: 66px;
+    width: min(17vw, 66px);
+    height: min(17vw, 66px);
+    min-width: 52px;
+    min-height: 52px;
     border-radius: 22px;
+    border-width: 4px;
     font-size: 26px;
   }
 
   .band-strip {
-    bottom: 104px;
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
     grid-template-columns: repeat(4, 1fr);
     gap: 6px;
+    margin-top: 18px;
   }
 
   .band-strip img {
     height: 28px;
     padding: 5px;
+  }
+
+  .rhythm-lanes {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    margin-top: 14px;
+    gap: 8px;
+  }
+
+  .rhythm-lanes i {
+    height: 42px;
+    border-radius: 12px;
   }
 
   .options {
@@ -708,5 +732,21 @@ h1 {
 
   .rank-logo {
     width: 44px;
+  }
+}
+
+@media (max-width: 380px) {
+  .character-orbit {
+    gap: 6px;
+  }
+
+  .avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 18px;
+  }
+
+  .band-strip img {
+    height: 24px;
   }
 }
